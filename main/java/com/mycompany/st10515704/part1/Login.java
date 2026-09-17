@@ -10,6 +10,7 @@ package com.mycompany.st10515704.part1;
  * @author kyrah
  */
 public class Login {
+    //Declare and make the atrributes private = meaning they are not accesible easily by the public
     private String Username;
     private String Password;
     private String phoneNumber;
@@ -32,13 +33,14 @@ public class Login {
               return "Username or Password incorrect, please TRY AGAIN";
           }
       }
-      //checkUsernme() :Boolean
+      //checkUsername() :Boolean
       public boolean checkUsername(){
           return Username.contains("_") && Username.length()<=5;
       }
         //Boolean: checkPasswordComplexity
       public boolean checkPasswordComplexity(){
            boolean hasUpper = !Password.equals(Password.toLowerCase());
+           // Reference: W3Schools Java Regex examples 
            boolean hasNumber = Password.matches(".*\\d.*");
            boolean hasSpecial = Password.matches(".*[!@#$%^&*].*");
              return Password.length()>=8 && hasUpper && hasNumber && hasSpecial;

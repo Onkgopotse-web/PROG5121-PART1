@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author kyrah
  */
 public class RegistrationTest {
-    
+    // QUESTION 4 (assertEquals)
    @Test 
    public void testUsernameCorrectFormat(){
        Registration reg1 = new Registration("kyl_1","Ch&&sec@ke99!","+27838968976","Onkgopotse", "Barekwang");
