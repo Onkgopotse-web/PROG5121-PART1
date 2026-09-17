@@ -13,16 +13,20 @@ public class Registration {
     private String Username;
     private String Password;
     private String phoneNumber;
+    private String firstName;
+    private String lastName;
                   //Constructor for Registration
-            public Registration(String Username,String Password,String phoneNumber){
+            public Registration(String Username,String Password,String phoneNumber, String firstName, String lastName){
                this.Username = Username;
                this.Password = Password;
                this.phoneNumber = phoneNumber;
+               this.firstName =firstName;
+               this.lastName = lastName;
             }
             // Check Username
             public String checkUsername(){
                 if(Username.contains("_") && Username.length()<=5){
-                    return "Username successfully captured.";
+                    return "Welcome " + firstName + "," + lastName + " it is great to see you!";
                 }else{
                     return "Username is not correctly formatted; please ensure that your username contains an underscore and is no more than five characters in length.";
                 }
@@ -46,7 +50,7 @@ public String checkCellPhoneNumber() {
     if (phoneNumber.matches("\\+27\\d{9}")) {
         return "Cell phone number successfully added.";
     } else {
-        return "Cell phone number incorrectly formatted or does not contain international code.";
+        return "Cell phone number incorrectly formatted or does not contain an international code; please correct the number and try again.";
     }
 }
  }

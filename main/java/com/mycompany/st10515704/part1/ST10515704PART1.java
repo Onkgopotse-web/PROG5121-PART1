@@ -30,7 +30,7 @@ public class ST10515704PART1 {
              
              
        //Create Registration Object     
-       Registration reg1= new Registration(Username,Password,phoneNumber);
+       Registration reg1= new Registration(Username,Password,phoneNumber,firstName,lastName);
          System.out.println(reg1.checkUsername());
          System.out.println(reg1.checkPassword());
          System.out.println(reg1.checkCellPhoneNumber());
