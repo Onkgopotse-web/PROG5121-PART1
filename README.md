@@ -51,9 +51,10 @@ The project demonstrates how to validate user registration and login details usi
 ---
 
 ## User Desktop Screenshot Image
-The following screenshot shows the workspace setup used while completing Question 4.  
+**The following screenshot shows the workspace setup used while completing Question 4.** 
 
----
+![image alt](https://github.com/Onkgopotse-web/PROG5121-PART1/blob/3244f334ae58344f7c21ca63ecba730d6c5bd961/RegistrationTest.png) 
+
 
 ## Author
 **Onkgopotse Barekwang**  
