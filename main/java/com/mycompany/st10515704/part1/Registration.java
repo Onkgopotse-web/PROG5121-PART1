@@ -53,5 +53,50 @@ public String checkCellPhoneNumber() {
         return "Cell phone number incorrectly formatted or does not contain an international code; please correct the number and try again.";
     }
 }
+    // Getter and Setter for Username
+    public String getUsername() {
+        return Username;
+    }
+
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
+    // Getter and Setter for Password
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
+    // Getter and Setter for Phone Number
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    // Getter and Setter for First Name
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    // Getter and Setter for Last Name
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
  }
                 

@@ -34,13 +34,23 @@ public class ST10515704PART1 {
          System.out.println(reg1.checkUsername());
          System.out.println(reg1.checkPassword());
          System.out.println(reg1.checkCellPhoneNumber());
-         
+         // Using getters to read values
+         System.out.println("Stored Username: " + reg1.getUsername());
+         System.out.println("Stored First Name: " + reg1.getFirstName());
+         System.out.println("Stored Cell Phone Number: " + reg1.getPhoneNumber());
             //Create Login Object
             Login log1 = new Login(Username, Password, phoneNumber, firstName, lastName);
             //Registration result
               System.out.println(log1.registerUser());
-              
-         //Login Class
+              // Display stored login details using getters
+                System.out.println("Stored Username: " + log1.getUsername());
+                System.out.println("Stored Password: " + log1.getPassword());
+                System.out.println("Stored Cell Phone Number: " + log1.getPhoneNumber());
+                System.out.println("Stored First Name: " + log1.getFirstName());
+                System.out.println("Stored Last Name: " + log1.getLastName());
+                
+                
+         //Login Phase
        System.out.println("\n===Login===");
        System.out.println("Enter Username:");
        String enteredUsername = kb.nextLine();

@@ -25,6 +25,51 @@ public class Login {
           this.firstName = firstName;
           this.lastName = lastName;
       }
+      // Getter and Setter for Username
+public String getUsername() {
+    return Username;
+}
+
+public void setUsername(String Username) {
+    this.Username = Username;
+}
+
+// Getter and Setter for Password
+public String getPassword() {
+    return Password;
+}
+
+public void setPassword(String Password) {
+    this.Password = Password;
+}
+
+// Getter and Setter for Phone Number
+public String getPhoneNumber() {
+    return phoneNumber;
+}
+
+public void setPhoneNumber(String phoneNumber) {
+    this.phoneNumber = phoneNumber;
+}
+
+// Getter and Setter for First Name
+public String getFirstName() {
+    return firstName;
+}
+
+public void setFirstName(String firstName) {
+    this.firstName = firstName;
+}
+
+// Getter and Setter for Last Name
+public String getLastName() {
+    return lastName;
+}
+
+public void setLastName(String lastName) {
+    this.lastName = lastName;
+}
+
       // Verify the Username and Password entered 
       public String VerifyUser(String enteredUsername, String enteredPassword){
           if (enteredUsername.equals(Username)&& enteredPassword.equals(Password)){
@@ -76,5 +121,6 @@ public class Login {
             return "Username or password incorrect, please try again.";
         }
      }
+     
      
 }
