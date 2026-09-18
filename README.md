@@ -33,7 +33,7 @@ The project demonstrates how to validate user registration and login details usi
 ## Test Data Summary
 | Test Case | Input | Expected Output |
 |------------|--------|----------------|
-| Username correctly formatted | `kyl_1` | `Welcome Kyrah, Smith it is great to see you.` |
+| Username correctly formatted | `kyl_1` | `Welcome Onkgopotse, Barekwang it is great to see you.` |
 | Username incorrectly formatted | `kyle!!!!!!!` | `Username is not correctly formatted; please ensure that your username contains an underscore and is no more than five characters in length.` |
 | Password meets complexity | `Ch&&sec@ke99!` | `Password successfully captured.` |
 | Password fails complexity | `password` | `Password is not correctly formatted; please ensure that the password contains at least eight characters, a capital letter, a number, and a special character.` |
