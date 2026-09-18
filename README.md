@@ -52,12 +52,6 @@ The project demonstrates how to validate user registration and login details usi
 
 ## User Desktop Screenshot Image
 The following screenshot shows the workspace setup used while completing Question 4.  
-Use this image as a **map** to understand:
-- Where the apps are placed on the screen (Edge on the left, NetBeans on the right).  
-- Operating system components not visible in app screenshots (taskbar, window layout).  
-- How the environment looked while coding and testing.
-
-![User Desktop Screenshot](screenshot.png)
 
 ---
 
@@ -75,3 +69,8 @@ official POE marking guide.
 - Demonstrates understanding of constructors, conditional logic, and automated testing.
 
 ## REFRENCES 
+## 📚 References
+- Cengage Learning. (2021). *Java Programming: Comprehensive Concepts and Applications* (10th ed.). MindTap Course List. ISBN: 9780357673423.
+https://www.w3schools.com/java/java_encapsulation.asp
+https://www.geeksforgeeks.org/java/regular-expressions-in-java/
+
