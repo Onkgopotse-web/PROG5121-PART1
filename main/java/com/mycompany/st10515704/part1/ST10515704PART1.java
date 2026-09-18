@@ -15,15 +15,19 @@ public class ST10515704PART1 {
     public static void main(String[] args) {
         //Create Scanner Object
         Scanner kb = new Scanner(System.in);
+        
              // Registration Phase
+             //User Iput
              System.out.println("Enter your Username:");
              String Username = kb.nextLine();
                System.out.println("Enter your Password:");
              String Password = kb.nextLine();
                System.out.println("Enter your Cell Phone Number:");
              String phoneNumber = kb.nextLine();
+             
              //Login phase
-              System.out.println("Enter your First Name:");
+             //User input              
+             System.out.println("Enter your First Name:");
              String firstName = kb.nextLine();
               System.out.println("Enter your Last Name:");
              String lastName = kb.nextLine();
@@ -34,10 +38,12 @@ public class ST10515704PART1 {
          System.out.println(reg1.checkUsername());
          System.out.println(reg1.checkPassword());
          System.out.println(reg1.checkCellPhoneNumber());
-         // Using getters to read values
+         
+         // Using getters to read values = Encapsulation
          System.out.println("Stored Username: " + reg1.getUsername());
          System.out.println("Stored First Name: " + reg1.getFirstName());
          System.out.println("Stored Cell Phone Number: " + reg1.getPhoneNumber());
+         
             //Create Login Object
             Login log1 = new Login(Username, Password, phoneNumber, firstName, lastName);
             //Registration result
