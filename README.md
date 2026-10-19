@@ -1,8 +1,9 @@
 # # PROG5121‑PART1
 
 ## Project Overview
-This repository contains the source code and JUnit tests for **Question 4** of the PROG5121 POE.  
+This repository contains the source code and JUnit tests for **Question 4,8 & 9** of the PROG5121 POE.  
 The project demonstrates how to validate user registration and login details using Java and JUnit in NetBeans.
+In Part 2 This project is a **simple messaging system** developed in Java as part of a POE assignment. It validates messages, generates unique IDs and hashes, processes user options (send, discard, store), and saves valid messages into a JSON file. The system demonstrates object‑oriented programming, input validation, control flow, string manipulation, and file handling.
 
 ---
 
@@ -27,7 +28,20 @@ The project demonstrates how to validate user registration and login details usi
   - `RegistrationTest.java` uses `assertEquals()` to compare expected and actual messages.
   - `LoginTest.java` uses `assertTrue()` and `assertFalse()` to verify Boolean results.
   - Test data matches the POE Question 4 table exactly.
-
+ 
+-**PART 2**
+## Features 
+- Validate recipient numbers (`+27` format) and message length (≤250 characters).
+- Generate unique 10‑digit Message IDs.
+- Create message hashes based on message content.
+- Process user options: **Send**, **Disregard**, or **Store**.
+- Persist messages in a JSON file (`messages.json`).
+- Return rubric‑aligned outputs for JUnit testing.
+- 
+##  Requirements
+- Java 8 or higher  
+- JUnit 5 for testing  
+- `org.json.simple` library for JSON storage  
 ---
 
 ## Test Data Summary
@@ -44,7 +58,7 @@ The project demonstrates how to validate user registration and login details usi
 
 ## How to Run Tests
 1. Open the project in **Apache NetBeans IDE 30**.  
-2. Right‑click each test class (`RegistrationTest.java` and `LoginTest.java`).  
+2. Right‑click each test class (`RegistrationTest.java` and `LoginTest.java` and 'MessageTest.java).  
 3. Select **Run File** to execute the tests.  
 4. A **green bar** indicates all tests passed successfully.
 
