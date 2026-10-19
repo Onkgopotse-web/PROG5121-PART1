@@ -68,6 +68,76 @@ public class ST10515704PART1 {
        boolean loginSuccess = log1.loginUser(enteredUsername, enteredPassword);
        System.out.println(log1.returnLoginStatus(loginSuccess));
        
+       
+       
+       ////PART 2
+      //(1&2)Only proceed if login succeded
+      if (loginSuccess) {
+            System.out.println("Welcome to QuickChat.");
+      
+     //Part 2 Menu
+     boolean running = true;
+     //While loop
+            while (running) {
+                System.out.println("\nMenu:");
+                System.out.println("1) Send Messages");
+                System.out.println("2) Show recently sent messages (Coming Soon)");
+                System.out.println("3) Quit");
+                System.out.print("Enter your choice: ");
+                   
+                 int choice =kb.nextInt();
+                 kb.nextLine(); //consume newLine
+                //menu logic will follow here(Q3&4)
+                switch (choice) {
+                    case 1:
+                        System.out.println("You selected: Send Messages");
+                        
+                        // Message sending logic will go here (Part 2 continuation)
+                        System.out.println("How many messages do you want to send? ");
+                        int numMessages = kb.nextInt();
+                        kb.nextLine(); // consume newLine
+                        
+                        //Create Message Object
+                        Message msg1 = new Message();
+                        int totalSent = 0;
+                        
+                        // For loop
+                        for(int i = 0; i< numMessages; i++){
+                            System.out.println("\nMessage " + (i + 1) + ":");
+                            System.out.print("Enter recipient number: ");
+                             String recipient = kb.nextLine();
+                           System.out.print("Enter message text: ");
+                              String messageText = kb.nextLine(); 
+                            System.out.println("Choose an option: 1) Send  2) Disregard  3) Store");
+                            int option = kb.nextInt();
+                            kb.nextLine(); // consume newline
+                            
+                       if (msg1.sendMessage(i + 1, recipient, messageText, option)) {
+                              totalSent++;
+                             }
+                        }
+                        System.out.println("Total messages successfully sent: " + totalSent); 
+                        break;
+
+                    case 2:
+                        System.out.println("Coming Soon.");
+                        break;
+
+                    case 3:
+                        System.out.println("Goodbye!");
+                        running = false;
+                        break;
+
+                    default:
+                        System.out.println("Invalid choice. Please enter 1, 2, or 3.");
+                }
+            }
+      } else { 
+          System.out.println("Login Failed. Exiting the program");
+      }
+  
+                      
+       
        kb.close();
     }      
     
