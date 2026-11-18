@@ -4,6 +4,7 @@
 This repository contains the source code and JUnit tests for **Question 4,8 & 9** of the PROG5121 POE.  
 The project demonstrates how to validate user registration and login details using Java and JUnit in NetBeans.
 In Part 2 This project is a **simple messaging system** developed in Java as part of a POE assignment. It validates messages, generates unique IDs and hashes, processes user options (send, discard, store), and saves valid messages into a JSON file. The system demonstrates object‑oriented programming, input validation, control flow, string manipulation, and file handling.
+Part 3 extends the QuickChat messaging system by introducing message management functionality using ArrayLists. Messages are categorized as Sent, Stored, or Disregarded, allowing users to search, analyse, delete, and generate reports based on message data.
 
 ---
 
@@ -43,6 +44,113 @@ In Part 2 This project is a **simple messaging system** developed in Java as par
 - JUnit 5 for testing  
 - `org.json.simple` library for JSON storage  
 ---
+-**PART 3**
+## Features
+## MessageManager.java
+Manages all message collections.
+Stores:
+## Sent Messages
+Stored Messages
+Disregarded Messages
+Message IDs
+Message Hashes
+## Message Categorisation
+Messages are automatically grouped according to the user's selected action:
+
+Send Message
+Store Message
+Disregard Message
+## Search Functionality
+The system allows users to:
+
+Search for a message using a Message ID.
+Search for messages belonging to a specific recipient.
+Message Analysis
+The system can:
+
+Display all stored messages.
+Display the longest stored message.
+## Delete Functionality
+Messages can be removed using their unique message hash.
+
+## Reporting
+The application generates a report containing:
+
+Message ID
+Message Hash
+Recipient Number
+Message Content
+
+## New Files Added
+
+### MessageManager.java
+Responsible for:
+- Managing ArrayLists
+- Searching messages
+- Deleting messages
+- Generating reports
+- Loading test data
+
+### MessageManagerTest.java
+JUnit test class used to verify:
+- Collection population
+- Search functionality
+- Message deletion
+- Longest stored message retrieval
+- Report generation
+
+## Part 3 Test Data
+
+| Message | Recipient | Message Content | Status |
+|----------|------------|----------------|---------|
+| 1 | +27834557896 | Did you get the cake? | Sent |
+| 2 | +27838884567 | Where are you? You are late! I have asked you to be on time. | Stored |
+| 3 | +27834484567 | Yohoooo, I am at your gate. | Disregarded |
+| 4 | 0838884567 | It is dinner time! | Sent |
+| 5 | +27838884567 | Ok, I am leaving without you. | Stored |
+
+## Part 3 JUnit Tests
+
+The following functionality is tested using JUnit:
+
+- Sent messages correctly populated.
+- Stored messages correctly populated.
+- Disregarded messages correctly populated.
+- Message ID collection population.
+- Message hash collection population.
+- Search by Message ID.
+- Search by recipient.
+- Longest stored message identification.
+- Delete message using hash.
+- Report generation.
+
+## Learning Outcomes Demonstrated
+
+- Object-Oriented Programming (OOP)
+- ArrayList Collections
+- Searching Algorithms
+- Report Generation
+- Data Categorisation
+- JSON File Handling
+- JUnit 5 Testing
+- Encapsulation and Class Design
+
+## Updated Project Structure
+
+```text
+src/
+│
+├── Registration.java
+├── Login.java
+├── Message.java
+├── MessageManager.java
+├── ST10515704PART1.java
+│
+└── TestClasses
+    ├── RegistrationTest.java
+    ├── LoginTest.java
+    ├── MessageTest.java
+    └── MessageManagerTest.java
 
 ## Test Data Summary
 | Test Case | Input | Expected Output |
