@@ -20,7 +20,11 @@ public class MessageTest1 {
     // -------------------------
     @Test
     public void testSendMessage_ValidRecipient_ShouldReturnTrue() {
-        Message msg1 = new Message();
+        Message msg1 = new Message("1000000001",
+    1,
+    "+27718693002",
+    "Hi Mike, can you join us for dinner tonight?",
+    "00:00:HITONIGHT");
         boolean result = msg1.sendMessage(1, "+27718693002",
                 "Hi Mike, can you join us for dinner tonight?", 1);
         assertTrue(result, "Message should be sent successfully...");
@@ -28,7 +32,11 @@ public class MessageTest1 {
 
     @Test
     public void testSendMessage_InvalidRecipient_ShouldReturnFalse() {
-        Message msg1 = new Message();
+        Message msg1 = new Message("1000000001",
+    1,
+    "+27718693002",
+    "Hi Mike, can you join us for dinner tonight?",
+    "00:00:HITONIGHT");
         boolean result = msg1.sendMessage(2, "08575975889",
                 "Hi Keegan, did you receive the payment?", 2);
         assertFalse(result, "Message should not be sent...");
@@ -36,7 +44,11 @@ public class MessageTest1 {
 
     @Test
     public void testSendMessage_MessageTooLong_ShouldReturnFalse() {
-        Message msg1 = new Message();
+        Message msg1 = new Message("1000000001",
+    1,
+    "+27718693002",
+    "Hi Mike, can you join us for dinner tonight?",
+    "00:00:HITONIGHT");
         String longMessage = "A".repeat(300);
         boolean result = msg1.sendMessage(3, "+27712345678", longMessage, 1);
         assertFalse(result, "Message should fail...");
@@ -47,14 +59,22 @@ public class MessageTest1 {
     // -------------------------
     @Test
     public void testCheckMessageID_ShouldBeTenDigits() {
-        Message msg1 = new Message();
+        Message msg1 = new Message("1000000001",
+    1,
+    "+27718693002",
+    "Hi Mike, can you join us for dinner tonight?",
+    "00:00:HITONIGHT");
         String id = "1234567890";
         assertTrue(msg1.checkMessageID(id), "Message ID should be valid...");
     }
 
     @Test
     public void testCheckRecipientCell_ShouldValidateCorrectly() {
-        Message msg1 = new Message();
+        Message msg1 = new Message("1000000001",
+    1,
+    "+27718693002",
+    "Hi Mike, can you join us for dinner tonight?",
+    "00:00:HITONIGHT");
         String validRecipient = "+2787654321";
         String invalidRecipient = "123456";
 
@@ -66,7 +86,11 @@ public class MessageTest1 {
 
     @Test
     public void testReturnTotalMessages_ShouldReturnCorrectCount() {
-        Message msg1 = new Message();
+        Message msg1 = new Message("1000000001",
+    1,
+    "+27718693002",
+    "Hi Mike, can you join us for dinner tonight?",
+    "00:00:HITONIGHT");
         int totalSent = 2;
         assertEquals(2, msg1.returnTotalMessages(totalSent),
                 "Total messages should match...");
@@ -77,7 +101,11 @@ public class MessageTest1 {
     // -------------------------
     @Test
     public void testMessageLength_Valid_ShouldReturnSuccessMessage() {
-        Message msg1 = new Message();
+        Message msg1 = new Message("1000000001",
+    1,
+    "+27718693002",
+    "Hi Mike, can you join us for dinner tonight?",
+    "00:00:HITONIGHT");
         String shortMessage = "Dinner tonight at 7pm.";
         String result = msg1.checkMessageLength(shortMessage);
         assertEquals("Message ready to send.", result,
@@ -86,7 +114,11 @@ public class MessageTest1 {
 
     @Test
     public void testMessageLength_TooLong_ShouldReturnFailureMessage() {
-        Message msg = new Message();
+        Message msg = new Message("1000000001",
+    1,
+    "+27718693002",
+    "Hi Mike, can you join us for dinner tonight?",
+    "00:00:HITONIGHT");
         String longMessage = "A".repeat(300);
         String result = msg.checkMessageLength(longMessage);
         assertEquals("Message exceeds 250 characters by 50; please reduce the size.", result,
@@ -95,7 +127,11 @@ public class MessageTest1 {
 
     @Test
     public void testRecipientNumber_Valid_ShouldReturnSuccessMessage() {
-        Message msg = new Message();
+        Message msg = new Message("1000000001",
+    1,
+    "+27718693002",
+    "Hi Mike, can you join us for dinner tonight?",
+    "00:00:HITONIGHT");
         String validRecipient = "+2787654321";
         String result = msg.checkRecipientCell(validRecipient);
         assertEquals("Cell phone number successfully captured.", result,
@@ -104,7 +140,11 @@ public class MessageTest1 {
 
     @Test
     public void testRecipientNumber_Invalid_ShouldReturnFailureMessage() {
-        Message msg = new Message();
+        Message msg = new Message("1000000001",
+    1,
+    "+27718693002",
+    "Hi Mike, can you join us for dinner tonight?",
+    "00:00:HITONIGHT");
         String invalidRecipient = "123456";
         String result = msg.checkRecipientCell(invalidRecipient);
         assertEquals("Cell phone number is incorrectly formatted or does not contain an international code. Please correct the number and try again.",
@@ -113,7 +153,11 @@ public class MessageTest1 {
 
     @Test
     public void testMessageHash_ShouldReturnCorrectHash() {
-        Message msg1 = new Message();
+        Message msg1 = new Message("1000000001",
+    1,
+    "+27718693002",
+    "Hi Mike, can you join us for dinner tonight?",
+    "00:00:HITONIGHT");
         String message = "Hi Mike, can you join us for dinner tonight?";
         String hash = msg1.generateMessageHash(message);
         assertEquals("00:0:HITONIGHT", hash,
@@ -122,7 +166,11 @@ public class MessageTest1 {
 
     @Test
     public void testMessageID_ShouldBeGenerated() {
-        Message msg = new Message();
+        Message msg = new Message("1000000001",
+    1,
+    "+27718693002",
+    "Hi Mike, can you join us for dinner tonight?",
+    "00:00:HITONIGHT");
         String id = msg.generateMessageID();
         assertTrue(id.matches("\\d{10}"),
                 "Expected Message ID to be generated as a 10-digit number.");
@@ -130,7 +178,11 @@ public class MessageTest1 {
 
     @Test
     public void testSendMessage_ShouldReturnSuccessMessage() {
-        Message msg = new Message();
+        Message msg = new Message("1000000001",
+    1,
+    "+27718693002",
+    "Hi Mike, can you join us for dinner tonight?",
+    "00:00:HITONIGHT");
         String result = msg.processMessageOption(1);
         assertEquals("Message successfully sent.", result,
                 "Expected system output when user selects Send Message.");
@@ -138,7 +190,11 @@ public class MessageTest1 {
 
     @Test
     public void testDisregardMessage_ShouldReturnDeletePrompt() {
-        Message msg = new Message();
+        Message msg = new Message("1000000001",
+    1,
+    "+27718693002",
+    "Hi Mike, can you join us for dinner tonight?",
+    "00:00:HITONIGHT");
         String result = msg.processMessageOption(2);
         assertEquals("Press 0 to delete the message.", result,
                 "Expected system output when user selects Disregard Message.");
@@ -146,7 +202,11 @@ public class MessageTest1 {
 
     @Test
     public void testStoreMessage_ShouldReturnStoredMessage() {
-        Message msg = new Message();
+        Message msg = new Message("1000000001",
+    1,
+    "+27718693002",
+    "Hi Mike, can you join us for dinner tonight?",
+    "00:00:HITONIGHT");
         String result = msg.processMessageOption(3);
         assertEquals("Message successfully stored.", result,
                 "Expected system output when user selects Store Message.");

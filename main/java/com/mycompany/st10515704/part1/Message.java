@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.st10515704.part1;
-import java.util.Random;
 import org.json.simple.JSONObject;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -19,6 +18,39 @@ public class Message {
     private String messageText;
     private String messageHash;
 
+    // Default Constructor
+    public Message(String messageID, int messageNumber, String recipient,String messageText,String messageHash) {
+        this.messageID = messageID;
+        this.messageNumber = messageNumber;
+        this.recipient = recipient;
+        this.messageText = messageText;
+        this.messageHash = messageHash;
+    }
+
+   
+    
+    //GETTERS
+     public String getMessageID() {
+        return messageID;
+    }
+
+    public int getMessageNumber() {
+        return messageNumber;
+    }
+
+    public String getRecipient() {
+        return recipient;
+    }
+
+    public String getMessageText() {
+        return messageText;
+    }
+
+    public String getMessageHash() {
+        return messageHash;
+    }
+    
+    
     // Method 1: Check Message ID
     public boolean checkMessageID(String messageID) {
         return messageID.matches("\\d{10}");
@@ -49,7 +81,7 @@ public class Message {
             System.out.println("Please enter a message of less than 250 characters.");
             return false;
         }
-        if (!recipient.startsWith("+27") || recipient.length() > 10) {
+        if (!recipient.startsWith("+27") || recipient.length() > 12) {
             return false;
         }
 
@@ -66,6 +98,7 @@ public class Message {
         System.out.println("Message Hash: " + messageHash);
 
         // Handle user option
+        
         switch (option) {
             case 1: // Send
                 System.out.println("Message successfully sent");
@@ -96,7 +129,7 @@ public class Message {
 
     // Method 6: Check Recipient Cell (Question 9)
     public String checkRecipientCell(String recipient) {
-        if (recipient.startsWith("+27") && recipient.length() <= 10) {
+        if (recipient.startsWith("+27") && recipient.length() <= 12) {
             return "Cell phone number successfully captured.";
         } else {
             return "Cell phone number is incorrectly formatted or does not contain an international code. Please correct the number and try again.";
